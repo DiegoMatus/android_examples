@@ -8,9 +8,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    EditText username;
     TextView textView;
 
     @Override
@@ -20,8 +22,13 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        textView = (TextView)findViewById(R.id.another_string_id);
-        textView.setText("GGGG pabos krazys lokos");
+        username = (EditText)findViewById(R.id.username_id);
+        textView = (TextView)findViewById(R.id.text_view_id);
+
+        username.setText("Ggg Lokos krazys");
+        textView.setText(username.getText());
+
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
