@@ -1,5 +1,6 @@
 package com.example.diego.codigofacilito;
 
+import android.media.Image;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,11 +10,11 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    EditText username;
-    TextView textView;
+    ImageView image;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,12 +23,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        username = (EditText)findViewById(R.id.username_id);
-        textView = (TextView)findViewById(R.id.text_view_id);
-
-        username.setText("Ggg Lokos krazys");
-        textView.setText(username.getText());
-
+        image = (ImageView)findViewById(R.id.image_id);
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

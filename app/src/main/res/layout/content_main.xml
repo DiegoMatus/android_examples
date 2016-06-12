@@ -9,22 +9,11 @@
     tools:context="com.example.diego.codigofacilito.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <EditText
-        android:id="@+id/username_id"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/image_id"
+        android:contentDescription="@string/another_string"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/username_string" />
-
-    <EditText
-        android:id="@+id/password_id"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/password_string" />
-
-    <TextView
-        android:id="@+id/text_view_id"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/another_string" />
+        android:src="@drawable/uv"/>
 
 </LinearLayout>
