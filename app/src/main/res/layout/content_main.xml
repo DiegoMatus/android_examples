@@ -8,6 +8,12 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.diego.codigofacilito.MainActivity"
     tools:showIn="@layout/activity_main">
+    
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Texto a enviar"/>
 
     <Button
         android:id="@+id/newActivity"
