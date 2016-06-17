@@ -9,12 +9,16 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
-    ImageView image;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+    EditText editText;
+    TextView textView;
+    Button button;
+    Button button2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +27,10 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        image = (ImageView)findViewById(R.id.image_id);
-
+        textView = (TextView) findViewById(R.id.text_view);
+        editText = (EditText) findViewById(R.id.edit_text);
+        button = (Button) findViewById(R.id.button);
+        button2 = (Button) findViewById(R.id.button2);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -34,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        button.setOnClickListener(this);
+        button2.setOnClickListener(this);
     }
 
     @Override
@@ -56,5 +65,20 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.button:
+                String texto = editText.getText().toString();
+                textView.setText(texto);
+                break;
+            case R.id.button2:
+                textView.setText("Gggg Pabos lokos");
+                break;
+            default:
+                break;
+        }
     }
 }

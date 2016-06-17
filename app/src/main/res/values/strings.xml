@@ -4,4 +4,5 @@
     <string name="another_string">Hola :3 Gggg</string>
     <string name="username_string">Username</string>
     <string name="password_string">Password</string>
+    <string name="edit_text_string">Text for Change</string>
 </resources>
