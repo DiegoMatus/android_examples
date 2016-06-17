@@ -1,5 +1,6 @@
 package com.example.diego.codigofacilito;
 
+import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -15,10 +16,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    EditText editText;
-    TextView textView;
-    Button button;
-    Button button2;
+    Button newActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        textView = (TextView) findViewById(R.id.text_view);
-        editText = (EditText) findViewById(R.id.edit_text);
-        button = (Button) findViewById(R.id.button);
-        button2 = (Button) findViewById(R.id.button2);
+        newActivity = (Button) findViewById(R.id.newActivity);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -41,8 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-        button.setOnClickListener(this);
-        button2.setOnClickListener(this);
+        newActivity.setOnClickListener(this);
     }
 
     @Override
@@ -70,12 +64,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.button:
-                String texto = editText.getText().toString();
-                textView.setText(texto);
-                break;
-            case R.id.button2:
-                textView.setText("Gggg Pabos lokos");
+            case R.id.newActivity:
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                startActivity(intent);
                 break;
             default:
                 break;
